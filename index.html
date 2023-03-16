@@ -10,147 +10,161 @@
 
 </head>
 <body>
-    <form id="form" action="">
-    <div class="container">
-        <div id="result"></div>
-        <div id="resultbanking"></div>
-        <div id="resultsubmit"></div>
-        <h1>Registreer</h1>
-        <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
-    
-        <div class="row mt-2">
-            <div class="col">
-                <label for="Voornaam">Voornaam</label>
-              <input type="text" id="Voornaam" class="form-control" placeholder="Uw voornaam" aria-label="Voornaam">
-            </div>
-            <div class="col">
-                <label for="Naam">Naam</label>
-              <input type="text" id="Naam" class="form-control" placeholder="Uw naam" aria-label="Naam">
-            </div>
-        </div>
+    <div class="row">
+            <form id="form" action="" class="col">
+                <div class="container">
 
-        <div class="row mt-2">
-            <div class="col">
-            <label for="Gebruikersnaam">Gebruikersnaam</label>
-            <div class="input-group">
-                <div class="input-group-text">@</div>
-                <input type="text" class="form-control" id="Gebruikersnaam" placeholder="u911236">
-            </div>
-            </div>  
-            <div class="col">
-                <label for="Email">E-mailadres</label>
-              <input type="text" id="Email" class="form-control" placeholder="mail@example.be" aria-label="Email">
-            </div>
-        </div>
-
-        <div class="row mt-2">
-            <div class="col">
-                <label for="Wachtwoord">Wachtwoord</label>
-              <input type="text" id="Wachtwoord" class="form-control" aria-label="Wachtwoord">
-              <div id="wwHelp" class="form-text">Je wachtwoord moet minstens 8 tekens lang zijn</div>
-            </div>
-            <div class="col">
-                <label for="WachtwoordHerhaal">Herhaal wachtwoord</label>
-              <input type="text" id="WachtwoordHerhaal" class="form-control" aria-label="WachtwoordHerhaal">
-            </div>
-        </div>
-
-        <div class="row mt-2">
-            <div>
-            <label for="Adres">Adres</label>
-            <input type="text" id="Adres" class="form-control" placeholder="Uw adres en huisnummer" aria-label="Adres">
-            </div>
-        </div>
-
-        <div class="row mt-2">
-            <div class="col">
-                <label for="Land">Land</label>
-                <select class="form-select" aria-label="Land" id="Land">
-                    <option selected>Kies een land</option>
-                    <option value="Afghanistan">Afghanistan</option>
-                    <option value="Bahrein">Bahrein</option>
-                    <option value="België">België</option>
-                    <option value="China">China</option>
-                    <option value="Duitsland">Duitsland</option>
-                    <option value="Egypte">Egypte</option>
-                  </select>
-            </div>
-            <div class="col">
-                <label for="Provincie">Provincie</label>
-                <select class="form-select" aria-label="Provincie" id="Provincie">
-                    <option selected>Kies een provincie</option>
-                    <option value="Antwerpen">Antwerpen</option>
-                    <option value="West-vlaanderen">West-vlaanderen</option>
-                    <option value="Oost-vlaanderen">Oost-vlaanderen</option>
-                    <option value="Limburg">Limburg</option>
-                    <option value="Luxemburg">Luxemburg</option>
-                    <option value="Brussel">Brussel</option>
-                  </select>
-            </div>
-
-            <div class="col">
-                <label for="Prostcode">Postcode</label>
-                <input type="text" id="Postcode" class="form-control" aria-label="Postcode">
-            </div>
-        </div>
-    
-        <hr class="hr" />
-        
-        <div class="row">
-            <div class="col">
-                <h2>Hou me op de hoogte</h2>
-                <div class="col">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="InschrijvenNieuwsbrief">
-                        <label class="form-check-label" for="InschrijvenNieuwsbrief">
-                            Inschrijven voor onze nieuwsbrief
-                        </label>
+                <h1>Registreer</h1>
+                <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
+            
+                <div class="row mt-2">
+                    <div class="col">
+                        <label for="Voornaam">Voornaam</label>
+                    <input type="text" id="Voornaam" class="form-control" placeholder="Uw voornaam" aria-label="Voornaam">
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="Akkoord">
-                        <label class="form-check-label" for="Akkoord">
-                        Ik ga akkoord met de algemene voorwaarden
-                        </label>
+                    <div class="col">
+                        <label for="Naam">Naam</label>
+                    <input type="text" id="Naam" class="form-control" placeholder="Uw naam" aria-label="Naam">
                     </div>
                 </div>
-            </div>
+
+                <div class="row mt-2">
+                    <div class="col">
+                    <label for="Gebruikersnaam">Gebruikersnaam</label>
+                    <div class="input-group">
+                        <div class="input-group-text">@</div>
+                        <input type="text" class="form-control" id="Gebruikersnaam" placeholder="u911236">
+                    </div>
+                    </div>  
+                    <div class="col">
+                        <label for="Email">E-mailadres</label>
+                    <input type="text" id="Email" class="form-control" placeholder="mail@example.be" aria-label="Email">
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col">
+                        <label for="Wachtwoord">Wachtwoord</label>
+                    <input type="text" id="Wachtwoord" class="form-control" aria-label="Wachtwoord">
+                    <div id="wwHelp" class="form-text">Je wachtwoord moet minstens 8 tekens lang zijn</div>
+                    </div>
+                    <div class="col">
+                        <label for="WachtwoordHerhaal">Herhaal wachtwoord</label>
+                    <input type="text" id="WachtwoordHerhaal" class="form-control" aria-label="WachtwoordHerhaal">
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div>
+                    <label for="Adres">Adres</label>
+                    <input type="text" id="Adres" class="form-control" placeholder="Uw adres en huisnummer" aria-label="Adres">
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col">
+                        <label for="Land">Land</label>
+                        <select class="form-select" aria-label="Land" id="Land">
+                            <option value="0" selected>Kies een land</option>
+                            <option value="1">Afghanistan</option>
+                            <option value="2">Bahrein</option>
+                            <option value="3">België</option>
+                            <option value="4">China</option>
+                            <option value="5">Duitsland</option>
+                            <option value="6">Egypte</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="Provincie">Provincie</label>
+                        <select class="form-select" aria-label="Provincie" id="Provincie">
+                            <option value="0" selected>Kies een provincie</option>
+                            <option value="1">Antwerpen</option>
+                            <option value="2">West-vlaanderen</option>
+                            <option value="3">Oost-vlaanderen</option>
+                            <option value="4">Limburg</option>
+                            <option value="5">Luxemburg</option>
+                            <option value="6">Brussel</option>
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <label for="Prostcode">Postcode</label>
+                        <input type="text" id="Postcode" class="form-control" aria-label="Postcode">
+                    </div>
+                </div>
+            
+                <hr class="hr" />
+                
+                <div class="row">
+                    <div class="col">
+                        <h3>Hou me op de hoogte</h3>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="InschrijvenNieuwsbrief">
+                                <label class="form-check-label" for="InschrijvenNieuwsbrief">
+                                    Inschrijven voor onze nieuwsbrief
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Akkoord">
+                                <label class="form-check-label" for="Akkoord">
+                                Ik ga akkoord met de algemene voorwaarden
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>Betaling</h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="myRadioButton" id="BankingApp" checked>
+                            <label class="form-check-label" for="BankingApp">
+                            Banking app
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="myRadioButton" id="Overschrijving" >
+                            <label class="form-check-label" for="Overschrijving">
+                            Overschrijving
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="myRadioButton" id="Visa" >
+                            <label class="form-check-label" for="Visa">
+                            Visa card
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="myRadioButton" id="Paypal" >
+                            <label class="form-check-label" for="Paypal">
+                            Paypal
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr class="hr" />
+
+                <div class="row">
+                    <button type="button" id="button" class="btn btn-primary">Wave your magic wand</button>
+                </div>
+                </div>
+
+            </form>
             <div class="col">
-                <h2>Betaling</h2>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="foo" id="radio" checked>
-                    <label class="form-check-label" for="BankingApp">
-                      Banking app
-                    </label>
+                <div>
+                <div id="result" class="alert alert-danger col-4" style="display:none"></div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="foo" id="radio" >
-                    <label class="form-check-label" for="Overschrijving">
-                      Overschrijving
-                    </label>
+                <div>
+                <div id="resultbanking" class="alert alert-primary col-4" style="display:none"></div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="foo" id="radio" >
-                    <label class="form-check-label" for="Visa">
-                      Visa card
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="foo" id="radio" >
-                    <label class="form-check-label" for="Paypal">
-                      Paypal
-                    </label>
+                <div>
+                <div id="resultsubmit" class="alert alert-success col-4" style="display:none"></div>
                 </div>
             </div>
         </div>
-        
-        <hr class="hr" />
 
-        <div class="row">
-            <button type="button" id="button" class="btn btn-primary">Wave your magic wand</button>
-          </div>
-        
-    </div>
-</form>
+
+
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
