@@ -1,18 +1,9 @@
 //declaration 
 const form = document.getElementById('form');
-const firstname = document.getElementById('Voornaam');
-const name = document.getElementById('Naam');
-const username = document.getElementById('Gebruikersnaam');
-const email = document.getElementById('Email');
-const password = document.getElementById('Wachtwoord');
-const passwordRepeat = document.getElementById('WachtwoordHerhaal');
-const adress = document.getElementById('Adres');
 const result = document.getElementById('result');
 const resultbanking = document.getElementById('resultbanking');
 const resultsubmit = document.getElementById('resultsubmit');
 const button = document.getElementById('button'); 
-const postalcode = document.getElementById('Postcode');
-var radioButtons = document.getElementsByName('MyRadioButton');
 var errors = [];
 
 button.addEventListener("click", validateForm, true);
@@ -22,20 +13,23 @@ function validateForm(){
     // https://www.youtube.com/watch?v=In0nB0ABaUk 
     //with parameters doens't work
     function checkEmptyField(){
-
         //check first name for value
+        const firstname = document.getElementById('Voornaam');
         if(firstname.value.trim() === "") {
             errors.push("Het veld voornaam is vereist.")
         }
         //check name for value
+        const name = document.getElementById('Naam');
         if(name.value.trim() === ""){
             errors.push("Het veld Naam is vereist")
         }
         //check username for value
+        const username = document.getElementById('Gebruikersnaam');
         if(username.value.trim() === ""){
             errors.push("Het veld gebruikersnaam is vereist.")
         }
         //check adress for value
+        const adress = document.getElementById('Adres');
         if(adress.value.trim() === ""){
             errors.push("Het veld adres is vereist.")
         }
@@ -59,40 +53,47 @@ function validateForm(){
         if (document.getElementById("Akkoord").checked==false) {
             errors.push("Je moet de algemene voorwaarden accepteren");
         }
-        //show error messages
-        if (errors.length > 0) {
-            result.innerHTML = "<h4>Yikes, errors...</h4>" + errors.join("<br>");
-            document.getElementById("result").style.display = "block";
-        }
-        
     }
-    checkEmptyField();
+   
     
-
     //validate email
-    function validateEmail(email){
-    //https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript
-        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        if(email.value.match(validRegex)) {
-            return true;
+    //https://masteringjs.io/tutorials/fundamentals/email-regex
+    function validateEmail() {
+        const email = document.getElementById('Email');
+        if (email.value.match(/(?:[a-z0-9+!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/gi)) {
+            console.log("email is valid");
         }
         else {
-            errors.push("Geef een valide email adres");
+            errors.push("email adres is niet juist");
         }
     }
-    validateEmail(email);
+    
 
     //validate password
-    function validatePassword(password,passwordRepeat) {
+    function checkpassword () {
+        const password = document.getElementById('Wachtwoord').value;
+        const passwordRepeat = document.getElementById('WachtwoordHerhaal').value;
         if (password.length < 8) {
-            errors.push("Het wachtwoord moet langer zijn dan 7 karakters.")
+            errors.push("Wachtwoord moet langer zijn dan 7 tekens");
         }
-        if (password !== passwordRepeat){
-            errors.push("De wachtwoorden komen niet overeen.")
+
+        if (password != passwordRepeat) {
+            errors.push("Wachtwoorden komen niet overeen");
         }
     }
 
-    validatePassword(password,passwordRepeat);
+    //check postal code
+    const postalcode = document.getElementById('Postcode');
+    function checkPC(postalcode) {
+         if(postalcode.value.trim() === "") {
+             errors.push("Het veld postcode is vereist.");
+         }
+          else if (postalcode >= 1000 || postalcode < 10000) {
+              errors.push("De waarde van postcode moet tussen 1000 en 9999 liggen.")
+          }
+    }
+
+ 
 
     //validate payment 
     //doesnt show value
@@ -125,21 +126,24 @@ function validateForm(){
         }
     }
 
-    validatePayment();
 
-    function checkPC(postalcode) {
-        if(postalcode.value.trim() === "") {
-            errors.push("Het veld postcode is vereist.");
-        }
-        else if (postalcode >= 1000 || postalcode < 10000) {
-            errors.push("De waarde van postcode moet tussen 1000 en 9999 liggen.")
-        }
+    //show error messages
+    function errormessage() {
+        if (errors.length > 0) {
+            result.innerHTML = "<h4>Yikes, errors...</h4>" + errors.join("<br>");
+            document.getElementById("result").style.display = "block";
+        } 
     }
 
+
+    //functions
+    checkEmptyField();
+    validateEmail();
+    checkpassword();
     checkPC(postalcode);
-
-
-
+    errormessage()
+    validatePayment();
+    
 
 }    
 
